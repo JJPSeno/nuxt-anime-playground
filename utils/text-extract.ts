@@ -1,17 +1,9 @@
-export default function (target: Ref<HTMLElement | null>) {
-  const element = target.value
-  if (!element){
-    return []
-  }
-
-  const text = element.textContent ?? ''
-  element.textContent = ''
-  
-  text.split('').forEach(char => {
+export default function textExtract(text: string, customClass: string = ''): HTMLElement[] {
+  return text.split('').map(char => {
     const span = document.createElement('span')
     span.innerHTML = char === ' ' ? '&nbsp;' : char
-    element.appendChild(span)
+    span.style.display = 'inline-block'
+    span.className = customClass
+    return span
   })
-
-  return element.querySelectorAll('span')
 }
