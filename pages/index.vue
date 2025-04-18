@@ -32,17 +32,28 @@ onMounted(() => {
 <template>
   <div
     ref="hello-container"
-    class="relative flex h-dvh items-center justify-center bg-fuchsia-300 text-white"
+    class="relative flex h-dvh items-center justify-center bg-primary"
   >
     <div
       ref="white-bg"
-      class="absolute top-0 left-0 h-dvh w-full bg-white"
+      class="absolute top-0 left-0 h-dvh w-full bg-secondary"
     />
     <h2 
       ref="hello"
-      class="flex text-3xl font-semibold z-10"
+      class="flex smear font-mono text-3xl z-10"
     >
       Hello World!
     </h2>
   </div>
 </template>
+
+<style lang="css" scoped>
+.smear {
+  color: white;
+  text-shadow:
+    1px 0 6px rgba(0, 255, 255, 0.3),
+    -1px 0 6px rgba(255, 0, 255, 0.3),
+    0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+</style>

@@ -7,6 +7,9 @@ export default {
         primary: '#0C0C0C',
         secondary: '#FFC20C',
       },
+      fontFamily:{
+        mono: ['DepartureMono', 'monospace'],
+      },
     },
   },
   plugins: [],
