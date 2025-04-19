@@ -1,36 +1,59 @@
 <script setup lang="ts">
 import { animate } from 'animejs'
 
-const hello = ref('hello')
+const hello = useTemplateRef<HTMLElement>('hello')
+const helloContainer = useTemplateRef<HTMLElement>('hello-container')
+const whiteBG = useTemplateRef<HTMLElement>('white-bg')
+
 onMounted(() => {
-  const spans = textExtract(hello)
-  console.log(spans)
+  if (!(hello.value && helloContainer.value && whiteBG.value)) {
+    return
+  }
   
-  animate(spans, {
-  y: [
-    { to: '-2.75rem', ease: 'outExpo', duration: 600 },
-    { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
-  ],
-  rotate: {
-    from: '-1turn',
-    delay: 0
-  },
-  delay: (_, i) => i * 50,
-  ease: 'inOutCirc',
-  loopDelay: 1000,
-  loop: true
-})
+  const originalText = hello.value.textContent ?? ''
+  const spanElements = textExtract(originalText)
+  hello.value.replaceChildren(...spanElements)
+
+  const spinGreeting = animate(spanElements, {
+    y: [
+      { to: '-2.75rem', ease: 'outExpo', duration: 600 },
+      { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
+    ],
+    rotate: {
+      from: '-1turn',
+      delay: 0
+    },
+    delay: (_, i) => i * 50,
+    ease: 'inOutCirc'
+  })
+  const moveWhiteDiv = animate(whiteBG.value, { x: '100%' })
 })
 </script>
 <template>
-  <main
-    class="flex h-dvh items-center justify-center"
+  <div
+    ref="hello-container"
+    class="relative flex h-dvh items-center justify-center bg-primary"
   >
+    <div
+      ref="white-bg"
+      class="absolute top-0 left-0 h-dvh w-full bg-secondary"
+    />
     <h2 
       ref="hello"
-      class="flex text-xl"
+      class="flex smear font-mono text-3xl z-10"
     >
       Hello World!
     </h2>
-  </main>
+  </div>
 </template>
+
+<style lang="css" scoped>
+.smear {
+  color: white;
+  text-shadow:
+    1px 0 6px rgba(0, 255, 255, 0.3),
+    -1px 0 6px rgba(255, 0, 255, 0.3),
+    0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+</style>
