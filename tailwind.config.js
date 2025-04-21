@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: '#0C0C0C',
         secondary: '#FFC20C',
+        dark: '#323943'
       },
       fontFamily:{
         mono: ['DepartureMono', 'monospace'],
