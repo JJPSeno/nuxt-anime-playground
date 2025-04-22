@@ -2,56 +2,91 @@
 
 </script>
 <template>
-<main
-  class="flex flex-col items-end"
->
-  <section
-    id="#game-dev"
-    class="h-dvh w-2/3 bg-primary p-4"
-  >
-  <div
-    class="border-solid border-secondary border-2 pb-2 pr-2 relative w-full"
-  >
-    <span class="before:block before:absolute before:-inset-1.5 before:-skew-y-3 before:bg-secondary relative inline-block z-10">
-      <span class="relative text-black z-20">
-      When you look
-      </span>
-    </span>
-    <p
-      class="ml-8 relative z-20 text-white top-3 mb-4"
+  <div>
+    <main
+      class="bg-primary flex"
     >
-      All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
-    </p>
-    <p
-      class="z-20 text-right italic text-gray-400 text-md"
+    <div
+      class="basis-1/3 custom-border relative"
     >
-      sphynx of black quartz judge my vow
-    </p>
+
+    </div>
+    <div
+      class="flex flex-col items-end basis-2/3 p-4"
+    >
+      <section
+        id="#game-dev"
+        class="min-h-dvh w-full after:block after:bg-secondary after:absolute after:skew-x-3 after:bottom-0"
+      >
+      <div
+        class="border-solid border-secondary border-2 pb-2 pr-2 relative w-full"
+      >
+        <span class="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-secondary relative inline-block z-10">
+          <span class="relative text-black z-20">
+          When you look
+          </span>
+        </span>
+        <p
+          class="ml-8 relative z-20 text-white top-3 mb-4"
+        >
+          All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
+        </p>
+        <p
+          class="z-20 text-right italic text-dark text-md"
+        >
+          sphynx of black quartz judge my vow
+        </p>
+      </div>
+      </section>
+      <section
+        id="#web-dev"
+        class="min-h-dvh w-full after:block after:bg-secondary after:absolute after:skew-x-3 after:bottom-0"
+      >
+      <div
+        class="border-solid border-secondary border-2 pb-2 pr-2 relative w-full"
+      >
+        <span class="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-secondary relative inline-block z-10">
+          <span class="relative text-black z-20">
+          When you look
+          </span>
+        </span>
+        <p
+          class="ml-8 relative z-20 text-white top-3 mb-4"
+        >
+          All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
+        </p>
+        <p
+          class="z-20 text-right italic text-dark text-md"
+        >
+          sphynx of black quartz judge my vow
+        </p>
+      </div>
+      </section>
+    </div>
+    </main>
+    <div
+      class="bg-primary h-dvh relative"
+    >
+      <div
+        class="absolute bottom-10 right-10 w-32 h-32 bg-secondary"
+      />
+    </div>
   </div>
-  </section>
-  <section
-    id="#game-dev"
-    class="h-dvh w-2/3 bg-secondary p-4"
-  >
-  <div
-    class="border-solid border-primary border-2 pb-2 pr-2 relative w-full"
-  >
-    <span class="before:block before:absolute before:-inset-1.5 before:-skew-y-3 before:bg-primary relative inline-block z-10">
-      <span class="relative text-white z-20">
-      When you look
-      </span>
-    </span>
-    <p
-      class="ml-8 relative z-20 text-black top-3 mb-4"
-    >
-      All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
-    </p>
-    <p
-      class="z-20 text-right italic text-dark text-md"
-    >
-      sphynx of black quartz judge my vow
-    </p>
-  </div>
-  </section>
-</main>
 </template>
+<style lang="css" scoped>
+
+.custom-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(var(--dark-rgb), 1) 0%, rgba(var(--dark-rgb), 0) 100%);
+  pointer-events: none;
+}
+
+.custom-border {
+  @apply relative;
+}
+</style>
