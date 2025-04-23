@@ -4,15 +4,15 @@
 <template>
   <div>
     <main
-      class="bg-primary flex"
+      class="bg-primary flex flex-col sm:flex-row"
     >
     <div
-      class="basis-1/3 custom-border relative"
+      class="w-full h-44 sm:h-auto sm:w-1/3 lg:min-w-80 lg:w-80 shrink-0 custom-border relative"
     >
 
     </div>
     <div
-      class="flex flex-col items-end basis-2/3 p-4"
+      class="flex flex-col basis-auto p-4 max-w-screen-xl"
     >
       <section
         id="#game-dev"
@@ -32,7 +32,7 @@
           All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
         </p>
         <p
-          class="z-20 text-right italic text-dark text-md"
+          class="ml-8 z-20 text-right italic text-dark text-md"
         >
           sphynx of black quartz judge my vow
         </p>
@@ -68,7 +68,7 @@
       class="bg-primary h-dvh relative"
     >
       <div
-        class="absolute bottom-10 right-10 w-32 h-32 bg-secondary"
+        class="absolute bottom-10 right-10 w-1/12 lg:w-[5%] aspect-square bg-secondary"
       />
     </div>
   </div>
@@ -86,7 +86,4 @@
   pointer-events: none;
 }
 
-.custom-border {
-  @apply relative;
-}
 </style>
