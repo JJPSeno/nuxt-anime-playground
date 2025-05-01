@@ -1,10 +1,12 @@
 <script setup lang="ts">
-
+import { motion, useScroll, MotionValue } from "motion-v"
 
 // Reference to the sidenav element
-const sidenav = useTemplateRef('sidenavRef');
+const sidenav = useTemplateRef<HTMLElement>('sidenavRef');
 // Reference to part-2 section
-const part2 = useTemplateRef('targetElem');
+const part2 = useTemplateRef<HTMLElement>('targetElem');
+const daCube = useTemplateRef<HTMLElement>('da-cube');
+const rotation = ref<MotionValue>()
 // State to track whether sidenav should be fixed
 const isFixed = ref(true);
 // State to track the positioning style when it's not fixed
@@ -35,6 +37,11 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll);
   // Initial check
   handleScroll();
+  // Ensure DOM is available
+  const { scrollY } = useScroll({ target: daCube })
+
+  // Rotate based on scroll
+  rotation.value = useTransform(scrollY, [0, 100, 900, 1300, 5000], [0, 90, 27, 360, 32])
 });
 
 // Clean up the event listener when component is unmounted
@@ -48,7 +55,7 @@ onBeforeUnmount(() => {
   >
     <section
       ref="sidenavRef"
-      class="h-dvh bg-violet-500 w-full sm:w-1/3 md:max-w-screen-xl fixed z-50"
+      class="h-dvh bg-violet-500 w-full sm:w-1/3 md:max-w-screen-xl fixed z-50 will-change-transform"
       :class="{ 
           'fixed top-0 transition-transform duration-300 ease-in-out': isFixed, 
           'absolute transition-transform duration-300 ease-in-out': !isFixed 
@@ -58,6 +65,11 @@ onBeforeUnmount(() => {
       <nav>
     
       </nav>
+      <motion.div
+        ref="da-cube"
+        class="absolute w-16 aspect-square bg-yellow-400 bottom-8 right-8 will-change-transform"
+        :style="{ rotateZ: rotation }"
+      />
     </section>
     <main
       class="relative w-0 sm:w-full"
