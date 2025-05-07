@@ -153,7 +153,7 @@
           <!-- Face 5 (Top) - Five dots -->
           <div class="face face-5">
             <h2
-              class="absolute text-3xl bottom-2 right-4 text-secondary"
+              class="absolute text-3xl bottom-2 right-3.5 text-secondary"
             >
               V
             </h2>
@@ -162,22 +162,22 @@
           <!-- Face 6 (Bottom) - Six dots -->
           <div class="face face-6">
             <div
-              class="absolute w-1 h-[50%] bottom-0 right-0 bg-secondary"
+              class="absolute w-1 h-[40%] bottom-3 right-1 bg-secondary"
             />
             <div
-              class="absolute w-1 h-10 bottom-0 right-2 bg-secondary"
+              class="absolute w-1 h-[50%] top-1 right-1 bg-secondary"
             />
             <div
-              class="absolute w-1 h-8 bottom-0 right-4 bg-secondary"
+              class="absolute w-[40%] h-1 bottom-1 right-3 bg-secondary"
             />
             <div
-              class="absolute w-1 h-4 bottom-0 right-6 bg-secondary"
+              class="absolute w-[50%] h-1 bottom-1 left-1 bg-secondary"
             />
             <div
-              class="absolute w-1 h-2 bottom-0 right-8 bg-secondary"
+              class="absolute w-2 h-2 bottom-0 right-0 bg-secondary"
             />
             <div
-              class="absolute w-1 h-1 bottom-0 right-10 bg-secondary"
+              class="absolute w-2 h-2 bottom-3 right-3 bg-secondary"
             />
           </div>
         </div>
