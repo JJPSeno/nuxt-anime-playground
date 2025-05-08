@@ -156,7 +156,7 @@
             <!-- Face 5 (Top) - Five dots -->
             <div class="face face-5">
               <h2
-                class="absolute font-serif text-3xl bottom-2 right-3.5 text-secondary"
+                class="absolute font-serif leading-[.6] text-3xl bottom-2 right-2 text-secondary"
               >
                 V
               </h2>
