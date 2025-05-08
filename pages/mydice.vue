@@ -102,97 +102,107 @@
         @mouseup="stopDrag"
         @mouseleave="stopDrag"
       />
-      <div class="scene">
-        <div ref="dice" class="dice">
-          <!-- Face 1 (Front) - One dot -->
-          <div class="face face-1">
-            <div
-              class="absolute w-4 h-4 bottom-2 right-2 bg-secondary"
-            />
+      <div
+        class="h-dvh w-full relative flex items-center justify-center bg-slate-900/95"
+      >
+        <div class="scene">
+          <div ref="dice" class="dice">
+            <!-- Face 1 (Front) - One dot -->
+            <div class="face face-1">
+              <div
+                class="absolute w-4 h-4 bottom-2 right-2 bg-secondary"
+              />
+            </div>
+            
+            <!-- Face 2 (Back) - Two dots -->
+            <div class="face face-2">
+              <div
+                class="absolute w-4 h-4 bottom-8 right-8 bg-secondary"
+              />
+              <div
+                class="absolute w-4 h-4 bottom-2 right-2 bg-secondary"
+              />
+            </div>
+            
+            <!-- Face 3 (Right) - Three dots -->
+            <div class="face face-3">
+              <div
+                class="absolute w-4 h-4 bottom-2 right-8 bg-secondary"
+              />
+              <div
+                class="absolute w-4 h-4 bottom-2 right-2 bg-secondary"
+              />
+              <div
+                class="absolute w-4 h-4 bottom-2 right-14 bg-secondary"
+              />
+            </div>
+            
+            <!-- Face 4 (Left) - Four dots -->
+            <div class="face face-4">
+              <div
+                class="absolute w-1 h-10 bottom-0 right-2 bg-secondary"
+              />
+              <div
+                class="absolute w-1 h-8 bottom-0 right-4 bg-secondary"
+              />
+              <div
+                class="absolute w-1 h-6 bottom-0 right-6 bg-secondary"
+              />
+              <div
+                class="absolute w-1 h-4 bottom-0 right-8 bg-secondary"
+              />
+            </div>
+            
+            <!-- Face 5 (Top) - Five dots -->
+            <div class="face face-5">
+              <h2
+                class="absolute font-serif text-3xl bottom-2 right-3.5 text-secondary"
+              >
+                V
+              </h2>
+            </div>
+            
+            <!-- Face 6 (Bottom) - Six dots -->
+            <div class="face face-6">
+              <div
+                class="absolute w-1 h-[40%] bottom-3 right-1 bg-secondary"
+              />
+              <div
+                class="absolute w-1 h-[50%] top-1 right-1 bg-secondary"
+              />
+              <div
+                class="absolute w-[40%] h-1 bottom-1 right-3 bg-secondary"
+              />
+              <div
+                class="absolute w-[50%] h-1 bottom-1 left-1 bg-secondary"
+              />
+              <div
+                class="absolute w-2 h-2 bottom-0 right-0 bg-secondary"
+              />
+              <div
+                class="absolute w-2 h-2 bottom-3 right-3 bg-secondary"
+              />
+            </div>
           </div>
-          
-          <!-- Face 2 (Back) - Two dots -->
-          <div class="face face-2">
-            <div
-              class="absolute w-4 h-4 bottom-8 right-8 bg-secondary"
-            />
-            <div
-              class="absolute w-4 h-4 bottom-2 right-2 bg-secondary"
-            />
-          </div>
-          
-          <!-- Face 3 (Right) - Three dots -->
-          <div class="face face-3">
-            <div
-              class="absolute w-4 h-4 bottom-2 right-8 bg-secondary"
-            />
-            <div
-              class="absolute w-4 h-4 bottom-2 right-2 bg-secondary"
-            />
-            <div
-              class="absolute w-4 h-4 bottom-2 right-14 bg-secondary"
-            />
-          </div>
-          
-          <!-- Face 4 (Left) - Four dots -->
-          <div class="face face-4">
-            <div
-              class="absolute w-1 h-10 bottom-0 right-2 bg-secondary"
-            />
-            <div
-              class="absolute w-1 h-8 bottom-0 right-4 bg-secondary"
-            />
-            <div
-              class="absolute w-1 h-6 bottom-0 right-6 bg-secondary"
-            />
-            <div
-              class="absolute w-1 h-4 bottom-0 right-8 bg-secondary"
-            />
-          </div>
-          
-          <!-- Face 5 (Top) - Five dots -->
-          <div class="face face-5">
-            <h2
-              class="absolute text-3xl bottom-2 right-3.5 text-secondary"
-            >
-              V
-            </h2>
-          </div>
-          
-          <!-- Face 6 (Bottom) - Six dots -->
-          <div class="face face-6">
-            <div
-              class="absolute w-1 h-[40%] bottom-3 right-1 bg-secondary"
-            />
-            <div
-              class="absolute w-1 h-[50%] top-1 right-1 bg-secondary"
-            />
-            <div
-              class="absolute w-[40%] h-1 bottom-1 right-3 bg-secondary"
-            />
-            <div
-              class="absolute w-[50%] h-1 bottom-1 left-1 bg-secondary"
-            />
-            <div
-              class="absolute w-2 h-2 bottom-0 right-0 bg-secondary"
-            />
-            <div
-              class="absolute w-2 h-2 bottom-3 right-3 bg-secondary"
-            />
-          </div>
+        </div>
+        <div class="controls">
+          <button ref="roll-btn" id="roll-btn" @click="rollDice">Roll Dice</button>
+          <button ref="rotate-btn" id="rotate-btn" @click="toggleRotate">Manual Rotate</button>
         </div>
       </div>
 
-      <div class="controls">
-        <button ref="roll-btn" id="roll-btn" @click="rollDice">Roll Dice</button>
-        <button ref="rotate-btn" id="rotate-btn" @click="toggleRotate">Manual Rotate</button>
-      </div>
     </ClientOnly>
+    <div
+      class="h-dvh w-full bg-slate-600"
+    >
+
+    </div>
   </main>
 </template>
 <style lang="css" scoped>
     main {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
@@ -204,7 +214,7 @@
     }
 
     .controls {
-      position: fixed;
+      position: absolute;
       bottom: 20px;
       display: flex;
       gap: 10px;
