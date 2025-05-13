@@ -19,7 +19,7 @@
         class="min-h-dvh w-full after:block after:bg-secondary after:absolute after:skew-x-3 after:bottom-0"
       >
       <div
-        class="border-solid border-secondary border-2 pb-2 pr-2 relative w-full"
+        class="border-solid border-secondary border-2 pb-2 pr-2 relative w-full text-white"
       >
         <span class="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-secondary relative inline-block z-10">
           <span class="relative text-black z-20">
@@ -31,6 +31,11 @@
         >
           All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
         </p>
+        <div
+          class="ml-8 mt-2"
+        >
+          <Iconlist />
+        </div>
         <p
           class="ml-8 z-20 text-right italic text-dark text-md"
         >
