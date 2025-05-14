@@ -1,21 +1,23 @@
 <script setup lang="ts">
   const extract =  {
-      slug: 'artPortfolio',
+      slug: 'meowmeow',
       media: [],
-      url: 'https://jkevinyu.vercel.app/',
-      title: 'Artist Portfolio',
-      description: 'A portfolio website for one of my best friends, John Kevin Yu, who is an artist from my home province of Cebu.',
-      techUsed: ['react','framermotion'],
+      url: '',
+      title: 'Website',
+      description: 'A website for A website, A website, who is A website from A website of A website A website.',
+      techUsed: ['react','framermotion', 'angular', 'angularjs'],
     }
 </script>
 <template>
   <section
-    class="flex flex-col"
+    class="flex gap-2 mt-8"
   >
     <span
       v-for="tech in extract.techUsed" :key="tech"
+      class="rounded-md bg-white p-2"
     >
       <img
+        class="w-10 aspect-square"
         :src="`/images/tech/${tech}.svg`"
       />
     </span>

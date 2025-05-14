@@ -32,7 +32,7 @@
           All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
         </p>
         <div
-          class="ml-8 mt-2"
+          class="ml-8"
         >
           <Iconlist />
         </div>
