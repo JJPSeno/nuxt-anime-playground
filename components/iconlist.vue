@@ -13,11 +13,12 @@
     class="flex gap-2 mt-8"
   >
     <span
-      v-for="tech in extract.techUsed" :key="tech"
-      class="rounded-md bg-white p-2"
+      v-for="(tech, idx) in extract.techUsed" :key="tech"
+      class="relative rounded-lg bg-noise bg-center bg-repeat p-2 border-black/60 border-2 border-solid origin-bottom"
+      :style="{ transform: `translateX(-${idx*1}rem) rotateZ(10deg)`}"
     >
       <img
-        class="w-10 aspect-square"
+        class="w-8 aspect-square"
         :src="`/images/tech/${tech}.svg`"
       />
     </span>

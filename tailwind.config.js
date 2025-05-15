@@ -8,6 +8,9 @@ export default {
         secondary: '#FFC20C',
         dark: '#9CA3AF'
       },
+      backgroundImage:{
+        'noise': "url('images/backgrounds/noise.svg')"
+      },
       fontFamily:{
         mono: ['DepartureMono', 'monospace'],
       },
