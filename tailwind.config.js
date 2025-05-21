@@ -9,7 +9,8 @@ export default {
         dark: '#9CA3AF'
       },
       backgroundImage:{
-        'noise': "url('images/backgrounds/noise.svg')"
+        'noise': "url('images/backgrounds/noise.svg')",
+        'pattern': "url('images/backgrounds/ttten.svg')"
       },
       fontFamily:{
         mono: ['DepartureMono', 'monospace'],

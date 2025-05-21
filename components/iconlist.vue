@@ -14,8 +14,8 @@
   >
     <span
       v-for="(tech, idx) in extract.techUsed" :key="tech"
-      class="relative rounded-lg bg-noise bg-center bg-repeat p-2 border-black/60 border-2 border-solid origin-bottom"
-      :style="{ transform: `translateX(-${idx*1}rem) rotateZ(10deg)`}"
+      class="relative rounded-lg bg-noise bg-center bg-no-repeat p-2 bg-[length:200%_200%]  border-black/60 border-2 border-solid origin-bottom"
+      :style="{ transform: `translateX(-${idx*1}rem) rotateZ(10deg)`, backgroundPosition: `${15*idx}% ${8*idx}%`}"
     >
       <img
         class="w-8 aspect-square"

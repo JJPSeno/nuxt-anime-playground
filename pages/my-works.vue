@@ -19,20 +19,23 @@
         class="min-h-dvh w-full after:block after:bg-secondary after:absolute after:skew-x-3 after:bottom-0"
       >
       <div
-        class="border-solid border-secondary border-2 pb-2 pr-2 relative w-full text-white"
+        class="pr-2 relative w-full text-white"
       >
+        <div
+          class="absolute -left-2 top-0 bg-pattern bg-cover bg-no-repeat w-12 h-full"
+        />
         <span class="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-secondary relative inline-block z-10">
           <span class="relative text-black z-20">
           When you look
           </span>
         </span>
         <p
-          class="ml-8 relative z-20 text-white top-3 mb-4"
+          class="ml-14 relative z-20 text-white top-3 mb-4"
         >
           All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. All the time, people think that you're busy. 
         </p>
         <div
-          class="ml-8"
+          class="ml-14"
         >
           <Iconlist />
         </div>
