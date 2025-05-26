@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-primary opacity-20"
+    class="bg-primary"
   >
     <img 
       src="/images/backgrounds/ttten.svg"
